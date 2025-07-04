@@ -9,12 +9,16 @@ import UIKit
 import SVProgressHUD
 
 class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let sdiop = [("optimization","Address"),("moderation","My Orders"),("algorithm","Wallet"),("personalization","Products"),("navigation","Set up"),]
+    let sdiop = [("optimization","Akdsdorgehsqs".emotionalction()),
+                 ("moderation","Mhyh iOkrsdiebrls".emotionalction()),
+                 ("algorithm","Wzaalyllent".emotionalction()),
+                 ("personalization","Pyrsordwudcftes".emotionalction()),
+                 ("navigation","Suebtq zudp".emotionalction()),]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5
     }
-    
+    var casflrl:AvatarComponent?
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -72,10 +76,18 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     
     private func qualityContent()  {
+        casflrl = AvatarComponent.init(baseColor: .white, width: 33, height: 33, depth: 33, roundness: 33)
+       
         conquering.delegate = self
+        casflrl?.width = 44
+       
         conquering.dataSource = self
         conquering.rowHeight = 59
+        casflrl?.height = 55
+        casflrl?.roundness = 45
+       
         conquering.showsVerticalScrollIndicator = false
+        casflrl?.depth = 90
         conquering.register(UITableViewCell.self, forCellReuseIdentifier: "congusingsetcell")
     }
     @IBAction func achieving(_ sender: UIButton) {
@@ -128,14 +140,14 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
             respectfulDialogue: "/czhjrz/swqpdgcirmhiho",
             marketInsights: [
              
-                "creativeHub": NerfBuff.tournamentBA,
+                "creativeHub": EhaviorPatterns.tournamentBA,
                 
             ],
             trendAnalysis: { [unowned self] response in
                 
                 SVProgressHUD.dismiss()
                 guard let neuralMap = response as? [String: Any],
-                      let seamless = neuralMap["data"] as? [String: Any]
+                      let seamless = neuralMap["dkartna".emotionalction()] as? [String: Any]
                 else {
                     
                     
@@ -144,9 +156,9 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
                 
                 
                 self.procuring.emphasizes(from: seamless["waiting"] as? String)
-                self.zhuanfOU.setTitle("Follow \(seamless["diversePerspectives"] as? Int ?? 0)", for: .normal)
+                self.zhuanfOU.setTitle("Fkoelmliolw".emotionalction() + " \(seamless["diversePerspectives"] as? Int ?? 0)", for: .normal)
                 
-                self.interactive.setTitle("Fans \(seamless["inclusiveSpace"] as? Int ?? 0)", for: .normal)
+                self.interactive.setTitle("Fzalnns".emotionalction() + " \(seamless["inclusiveSpace"] as? Int ?? 0)", for: .normal)
                 self.attaining.text = seamless["interactiveGallery"] as? String
             },behaviorPatterns: { [weak self] error in
                 SVProgressHUD.dismiss()

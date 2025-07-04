@@ -73,7 +73,7 @@
                             <constraint firstAttribute="height" constant="140" id="nzD-kr-VSq"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcc-jW-U17">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcc-jW-U17">
                         <rect key="frame" x="370" y="142" width="75" height="32"/>
                         <color key="backgroundColor" red="0.80392156862745101" green="0.20392156862745098" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

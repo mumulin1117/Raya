@@ -218,6 +218,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RayaStrertegies/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Raya;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Enable Camera to capture play moments . Your snapshots power profile avatars and community challenges.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Activate Microphone to strategize with teammates through voice channels and create immersive audio reactions. ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Grant access to your Photo libary to showcase  memories, equip profile customizations, and share epic victory snapshots with your clan.";
@@ -254,6 +255,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RayaStrertegies/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Raya;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Enable Camera to capture play moments . Your snapshots power profile avatars and community challenges.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Activate Microphone to strategize with teammates through voice channels and create immersive audio reactions. ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Grant access to your Photo libary to showcase  memories, equip profile customizations, and share epic victory snapshots with your clan.";

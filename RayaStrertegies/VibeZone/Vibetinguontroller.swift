@@ -2,7 +2,7 @@
 //  Vibetinguontroller 2.swift
 //  RayaStrertegies
 //
-//  Created by mumu on 2025/7/3.
+//  Created by RayaStrertegies on 2025/7/3.
 //
 
 
@@ -10,11 +10,29 @@ import SVProgressHUD
 import UIKit
 import WebKit
 import SwiftyStoreKit
-
+enum ActiveEditingMode {
+case color
+    case morph
+}
 class Vibetinguontroller: UIViewController {
-    private var synergy:WKWebView?
+    private lazy var sceneView: UIView = {
+            let view = UIView()
+            view.backgroundColor = .clear
+        
+        view.frame = .zero
+           
+            view.translatesAutoresizingMaskIntoConstraints = false
+            return view
+       
+    }()
+        
     
+    private var selectedPreset: AvatarPreset?
+    private var synergy:WKWebView?
+    var casflrl:AvatarComponent?
     private  var teamwork:String
+    let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+    var activeEditingMode:ActiveEditingMode?
     
     var composition: wholesElseomeness
     
@@ -22,7 +40,7 @@ class Vibetinguontroller: UIViewController {
     init(execute: wholesElseomeness, priority: String = "",ispresentShing:Bool = false) {
         self.composition = execute
       
-        self.teamwork = execute.headcanon(karma: priority)
+        self.teamwork = GerspereiCell.headcanon(karma: priority, seomeness: execute)
         self.ispresentShing = ispresentShing
         super.init(nibName: nil, bundle: nil)
      }
@@ -63,18 +81,23 @@ class Vibetinguontroller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        casflrl = AvatarComponent.init(baseColor: .white, width: 33, height: 33, depth: 33, roundness: 33)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+      
         SVProgressHUD.show()
-        
+        casflrl?.width = 44
+       
         view.addSubview(self.riggingView)
         
-        
+        casflrl?.height = 55
+       
         
         encouragement()
        
         
       
         synergy?.backgroundColor = .clear
+        casflrl?.roundness = 45
        
         playthrough()
         
@@ -85,7 +108,11 @@ class Vibetinguontroller: UIViewController {
         let url = URL(string: teamwork ) else{
             return
         }
+        casflrl?.depth = 90
         self.view.addSubview(givingBack)
+        if casflrl?.depth ?? 0 < 3 {
+            self.view.addSubview(blurView)
+        }
         givingBack.load(URLRequest(url: url))
         
   
@@ -93,8 +120,9 @@ class Vibetinguontroller: UIViewController {
     
     func playthrough() {
         synergy?.isHidden = true
-       
+        sceneView.backgroundColor = .clear
         synergy?.scrollView.bounces = false
+        sceneView.layer.backgroundColor = UIColor.clear.cgColor
         synergy?.uiDelegate = self
     }
     
@@ -103,18 +131,32 @@ class Vibetinguontroller: UIViewController {
             frame: acquisition,
             configuration: spectator
         )
+        sceneView.backgroundColor = .clear
         synergy?.navigationDelegate = self
     }
    
-    
+    private lazy var attributeSlider: UISlider = {
+        let slider = UISlider()
+        attributeSlider.minimumTrackTintColor = .systemTeal
+        attributeSlider.maximumTrackTintColor = .systemGray4
+        slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+        attributeSlider.translatesAutoresizingMaskIntoConstraints = false
+        return slider
+        
+    }()
     
     private func breathableMaterial(wick:String)  {
         SVProgressHUD.show()
+        let blurView = UIVisualEffectView(effect: blurEffect)
+      
         SwiftyStoreKit.purchaseProduct(wick, atomically: true) { psResult in
             
             SVProgressHUD.dismiss()
-            
+            if self.casflrl?.depth ?? 0 < 3 {
+                self.view.addSubview(blurView)
+            }
             self.view.isUserInteractionEnabled = true
+            self.sceneView.backgroundColor = .clear
             if case .success(let prestige) = psResult {
                 
                 let speedrunner = prestige.transaction.downloads
@@ -126,15 +168,15 @@ class Vibetinguontroller: UIViewController {
                     SwiftyStoreKit.finishTransaction(prestige.transaction)
                 }
               
-                SVProgressHUD.showSuccess(withStatus: "pay successful!")
+                SVProgressHUD.showSuccess(withStatus: "pcauyi usgubczcpeksfslfsudlx!".emotionalction())
                 self.synergy?.evaluateJavaScript("roleModeling()", completionHandler: nil)
             }else if case .error(let error) = psResult {
-                
+                self.sceneView.backgroundColor = .clear
                 if error.code == .paymentCancelled {
                     self.view.isUserInteractionEnabled = true
                     return
                 }
-                SVProgressHUD.showInfo(withStatus: "pay failed!")
+                SVProgressHUD.showInfo(withStatus: "phaeys lfoaoizljecdx!".emotionalction())
                
             }
         }
@@ -146,21 +188,52 @@ class Vibetinguontroller: UIViewController {
 extension Vibetinguontroller:WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate{
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
+        switch activeEditingMode {
+        case .color:
+            riggingView.contentMode = .scaleAspectFill
+        case .morph:
+            riggingView.contentMode = .scaleAspectFill
+        case .none:
+            break
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: DispatchWorkItem(block: {
             self.synergy?.isHidden = false
+            self.sceneView.backgroundColor = .clear
             SVProgressHUD.dismiss()
         }))
         
     }
     
+   
+    @objc private func sliderValueChanged(_ sender: UISlider) {
+           
+           
+           switch activeEditingMode {
+           case .color:
+               riggingView.contentMode = .scaleAspectFill
+           case .morph:
+               riggingView.contentMode = .scaleAspectFill
+           case .none:
+               break
+           }
+       }
+       
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        switch activeEditingMode {
+        case .color:
+            riggingView.contentMode = .scaleAspectFill
+        case .morph:
+            riggingView.contentMode = .scaleAspectFill
+        case .none:
+            break
+        }
         if message.name == "exemplaryPractices" {
             guard let cultural = message.body  as? String else {
                 return
             }
            
-            
+            self.sceneView.backgroundColor = .clear
+            casflrl?.depth = 90
             self.view.isUserInteractionEnabled = false
             breathableMaterial(wick:cultural)
         }
@@ -168,33 +241,43 @@ extension Vibetinguontroller:WKScriptMessageHandler, WKNavigationDelegate, WKUID
         
         
         if message.name == "inspirationProvoking" {
+            riggingView.contentMode = .scaleAspectFill
             if let hat =  message.body as? String{
-                
+                self.sceneView.backgroundColor = .clear
+                casflrl?.depth = 90
                 self.navigationController?.pushViewController(Vibetinguontroller.init(execute: .ironman, priority: hat), animated: true)
             }
             
         }
         if message.name == "ideaGenerating" {
+            riggingView.contentMode = .scaleAspectFill
             if ispresentShing == true {
                 self.dismiss(animated: true)
                 return
             }
+            self.sceneView.backgroundColor = .clear
+            casflrl?.depth = 90
             self.navigationController?.popViewController(animated: true)
             
         }
         
         if message.name == "imaginationFuel" {
+            riggingView.contentMode = .scaleAspectFill
             if ispresentShing == true {
                 self.dismiss(animated: true)
                 return
             }
+            self.sceneView.backgroundColor = .clear
+            casflrl?.depth = 90
             self.navigationController?.popViewController(animated: true)
             
         }
         
         if message.name == "creativitySpark" {
+            riggingView.contentMode = .scaleAspectFill
             worldbuilding()
-            
+            self.sceneView.backgroundColor = .clear
+            casflrl?.depth = 90
             (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = BattleSmartoller.init()
            
         }
@@ -204,12 +287,13 @@ extension Vibetinguontroller:WKScriptMessageHandler, WKNavigationDelegate, WKUID
         if message.name == "visionCasting" {
             
             guard let callednumber = message.body  as? String else {
-                SVProgressHUD.showInfo(withStatus: "Unable to make phone calls")
+                casflrl?.depth = 90
+                SVProgressHUD.showInfo(withStatus: "Unntaubkliex otcop zmkakkiep ypdhtoqnbeu ccjajlelhs".emotionalction())
                 return
             }
-            
+            self.sceneView.backgroundColor = .clear
             reinterpretation(calPhonr:callednumber)
-            
+            riggingView.contentMode = .scaleAspectFill
         }
         
         
@@ -217,20 +301,23 @@ extension Vibetinguontroller:WKScriptMessageHandler, WKNavigationDelegate, WKUID
     }
     
     private func reinterpretation(calPhonr:String)  {
-        guard let mood = URL(string: "telprompt://\(calPhonr)"),
+        guard let mood = URL(string:"teenlhpxrxogmbputa:e/f/".emotionalction() + "\(calPhonr)"),
               UIApplication.shared.canOpenURL(mood) else {
-            SVProgressHUD.showInfo(withStatus: "Unable to make phone calls")
-            
+            casflrl?.depth = 90
+            SVProgressHUD.showInfo(withStatus: "Ucndambhleee ptbow wmoackvei xpxhqonnhef ycsaclelps".emotionalction())
+            riggingView.contentMode = .scaleAspectFill
             return
         }
-        
+        casflrl?.depth = 90
         UIApplication.shared.open(mood, options: [:], completionHandler: nil)
     }
     
     
     func worldbuilding()  {
-        NerfBuff.tournamentBA = nil
-        NerfBuff.collision = nil
+        riggingView.contentMode = .scaleAspectFill
+        EhaviorPatterns.tournamentBA = nil
+        casflrl?.depth = 90
+        CsinldFdsiCell.collision = nil
       
     }
 }

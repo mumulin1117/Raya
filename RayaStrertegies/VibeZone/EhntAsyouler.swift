@@ -2,7 +2,7 @@
 //  EhntAsyouler.swift
 //  RayaStrertegies
 //
-//  Created by mumu on 2025/7/3.
+//  Created by RayaStrertegies on 2025/7/3.
 //
 
 import UIKit

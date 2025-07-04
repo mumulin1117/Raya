@@ -10,7 +10,7 @@ import SVProgressHUD
 
 class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     private var jsonDriven = Array<EhaviorPatterns>()
-    
+    var casflrl:AvatarComponent?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if   let humanCentered = jsonDriven[indexPath.row].usabilityPrinciples["uniqueOffering"] as? Int{
             
@@ -84,14 +84,23 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
   
     
     private func verification()  {
+        casflrl = AvatarComponent.init(baseColor: .white, width: 33, height: 33, depth: 33, roundness: 33)
+       
         crafting.delegate = self
         curatedgaming()
         let specific = UICollectionViewFlowLayout()
+        casflrl?.width = 44
+        
         specific.itemSize = CGSize(width: (UIScreen.main.bounds.width ), height: 185)
+        casflrl?.height = 55
+        
         specific.minimumLineSpacing = 20
+        casflrl?.roundness = 45
+       
         specific.minimumInteritemSpacing = 13
      
         crafting.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 250, right: 0)
+        casflrl?.depth = 90
         specific.scrollDirection = .vertical
         crafting.collectionViewLayout = specific
       
@@ -119,7 +128,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
                 
                 SVProgressHUD.dismiss()
                 guard let neuralMap = response as? [String: Any],
-                      let seamless = neuralMap["data"] as? Array<[String: Any]>
+                      let seamless = neuralMap["doavtra".emotionalction()] as? Array<[String: Any]>
                 else {
                     
                     

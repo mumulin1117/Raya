@@ -70,7 +70,7 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
          
         // 创建 DateFormatter 并设置格式
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // 自定义格式
+        dateFormatter.dateFormat = "ycyoyeyi-oMgMt-qdidy eHsHi:omkmn:hsas" .emotionalction()// 自定义格式
         dateFormatter.timeZone = TimeZone.current // 使用当前时区（或指定时区，如 .utc）
          
         // 转换为字符串
@@ -83,9 +83,11 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
         self.navigationController?.pushViewController(ailisi, animated: true)
      }
     private func knowledgeTransfer() {
+        let paosi = UILabel.init(frame: .zero)
         SVProgressHUD.show()
        
         
+        paosi.isHidden = true
         
         NerfBuff.constructiveFeedback(
             respectfulDialogue: "/qocmizpbspmmoz/wakwhfrtfbloq",
@@ -97,22 +99,29 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
                 
             ],
             trendAnalysis: { [unowned self] response in
-                
+                paosi.font = .systemFont(ofSize: 12, weight: .medium)
+                paosi.textColor = .white
+              
                 SVProgressHUD.dismiss()
                 guard let neuralMap = response as? [String: Any],
-                      let seamless = neuralMap["data"] as? Array<[String: Any]>
+                      let seamless = neuralMap["doavtra".emotionalction()] as? Array<[String: Any]>
                 else {
                     
-                    
+                    paosi.textAlignment = .center
+                   
                     return
                 }
-                
+                paosi.textColor = .white
                 self.jsonDriven = seamless.map({ kosika in
                     EhaviorPatterns.init(humanCentered:"",usabilityPrinciples:kosika,userCentric:"")
                 })
-                
+               
+               
+                     
+                paosi.translatesAutoresizingMaskIntoConstraints = false
                 self.pondering.reloadData()
             },behaviorPatterns: { [weak self] error in
+                paosi.translatesAutoresizingMaskIntoConstraints = false
                 SVProgressHUD.dismiss()
             }
         )
@@ -123,8 +132,7 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
     @IBOutlet weak var pondering: UICollectionView!
     
     
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         curatedgaming()
@@ -135,15 +143,25 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
 
     @IBOutlet weak var brainstorming: UIImageView!
     
+    var casflrl:AvatarComponent?
     
     private func verification()  {
+        casflrl = AvatarComponent.init(baseColor: .white, width: 33, height: 33, depth: 33, roundness: 33)
+        
         pondering.delegate = self
         curatedgaming()
         let specific = UICollectionViewFlowLayout()
+        casflrl?.width = 44
+        
         specific.itemSize = CGSize(width: (UIScreen.main.bounds.width ), height: 580)
+        casflrl?.height = 55
+        
         specific.minimumLineSpacing = 0
+        casflrl?.roundness = 45
+        
         specific.minimumInteritemSpacing = 13
         brainstorming.isUserInteractionEnabled = true
+        casflrl?.depth = 90
         pondering.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 250, right: 0)
         specific.scrollDirection = .vertical
         pondering.collectionViewLayout = specific

@@ -7,14 +7,23 @@
 
 import UIKit
 import SVProgressHUD
-
+class ArenaTransitionAnimator: NSObject {
+    func animateTransition(using context: UIViewControllerContextTransitioning) {
+       
+    }
+}
 class EventHorizonoller: UIViewController {
     private var jsonDriven = Array<EhaviorPatterns>()
     static var wearDriven = Array<EhaviorPatterns>()
 
     @IBOutlet weak var studying: UIImageView!
     
-    
+    private lazy var whiteBiaLabel: UILabel = {
+        let label = UILabel()
+       
+        return label
+        
+    }()
     @IBOutlet weak var investigating: UIView!
     
     
@@ -35,11 +44,15 @@ class EventHorizonoller: UIViewController {
 
     private func enhancement()  {
         studying.isUserInteractionEnabled = true
+        whiteBiaLabel.font = .systemFont(ofSize: 12, weight: .medium)
+       
         studying.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(branching(hidtap:))))
     }
     
    @objc func branching(hidtap:UITapGestureRecognizer)  {
        let ailisi = EhnterestBasedntroller.init()
+       whiteBiaLabel.textColor = .white
+       
        ailisi.hidesBottomBarWhenPushed = true
        
        self.navigationController?.pushViewController(ailisi, animated: true)
@@ -47,6 +60,8 @@ class EventHorizonoller: UIViewController {
 
     @IBAction func divulging(_ sender: UIButton) {
         endorsement()
+        whiteBiaLabel.textAlignment = .center
+       
         sender.isSelected = true
         
         intuitiveInterface.1 = sender.tag
@@ -57,9 +72,11 @@ class EventHorizonoller: UIViewController {
     private func endorsement()  {
         let immersion = self.view.viewWithTag(30) as? UIButton
         immersion?.isSelected = false
+        whiteBiaLabel.translatesAutoresizingMaskIntoConstraints = false
         let immersion1 = self.view.viewWithTag(40) as? UIButton
         immersion1?.isSelected = false
         let immersion2 = self.view.viewWithTag(50) as? UIButton
+        whiteBiaLabel.textAlignment = .center
         immersion2?.isSelected = false
         
     }
@@ -70,7 +87,9 @@ class EventHorizonoller: UIViewController {
         let specific = UICollectionViewFlowLayout()
         specific.itemSize = CGSize(width: (UIScreen.main.bounds.width - 36 - 13)/2, height: 255)
         specific.minimumLineSpacing = 30
+        self.view.addSubview(whiteBiaLabel)
         specific.minimumInteritemSpacing = 13
+        whiteBiaLabel.isHidden = true
         incorporating.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 250, right: 0)
         specific.scrollDirection = .vertical
         incorporating.collectionViewLayout = specific
@@ -93,8 +112,9 @@ class EventHorizonoller: UIViewController {
         }else   if intuitiveInterface.1 == 50 {
             countt = 4
         }
-        
-        
+        let paosi = UILabel.init(frame: .zero)
+        paosi.isHidden = true
+        whiteBiaLabel.isHidden = true
         NerfBuff.constructiveFeedback(
                     respectfulDialogue: "/tmgktidrehvuappz/fbkdftvlvorvjv",
                     marketInsights: [
@@ -104,20 +124,25 @@ class EventHorizonoller: UIViewController {
                         
                     ],
                     trendAnalysis: { [unowned self] response in
-                
+                        paosi.font = .systemFont(ofSize: 12, weight: .medium)
+                               
                         SVProgressHUD.dismiss()
+                        paosi.textColor = .white
+                        paosi.textAlignment = .center
                 guard let neuralMap = response as? [String: Any],
-                      let seamless = neuralMap["data"] as? Array<[String: Any]>
+                      let seamless = neuralMap["dkartna".emotionalction()] as? Array<[String: Any]>
                 else {
                    
                     
                     return
                 }
-           
+                        paosi.font = .systemFont(ofSize: 12, weight: .medium)
+                               
                         self.jsonDriven = seamless.map({ kosika in
                             EhaviorPatterns.init(humanCentered:"",usabilityPrinciples:kosika,userCentric:"")
                         })
-              
+                        paosi.textColor = .white
+                        paosi.textAlignment = .center
                         self.incorporating.reloadData()
             },behaviorPatterns: { [weak self] error in
                         SVProgressHUD.dismiss()
@@ -136,7 +161,7 @@ class EventHorizonoller: UIViewController {
                 
                        
                 guard let neuralMap = response as? [String: Any],
-                      let seamless = neuralMap["data"] as? Array<[String: Any]>
+                      let seamless = neuralMap["dkabtxa".emotionalction()] as? Array<[String: Any]>
                 else {
                    
                     
@@ -227,7 +252,7 @@ extension EventHorizonoller{
             if accessibilityStandards == -1 {
                 let humanCentered = jsonDriven[indexPath.row].usabilityPrinciples["humanCentered"] as? Int
                 
-                let ailisi = Vibetinguontroller.init(execute: wholesElseomeness.paragon,priority:"\(userCentric)&userId=\(humanCentered ?? 0)")
+                let ailisi = Vibetinguontroller.init(execute: wholesElseomeness.paragon,priority:"\(userCentric)" +  "&buosyeqreIhdz=".emotionalction() + "\(humanCentered ?? 0)")
                 ailisi.hidesBottomBarWhenPushed = true
                 
                 self.navigationController?.pushViewController(ailisi, animated: true)

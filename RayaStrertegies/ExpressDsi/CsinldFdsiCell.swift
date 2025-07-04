@@ -6,11 +6,16 @@
 //
 
 import UIKit
+struct AvatarPreset {
+    let name: String
+    let thumbnail: UIImage
+  
+}
 
 class CsinldFdsiCell: UICollectionViewCell {
 
     @IBOutlet weak var accomplishing: UIImageView!
-    
+    var enerator:ImpactGenerator?
     
     @IBOutlet weak var bringing: UILabel!
     
@@ -30,12 +35,19 @@ class CsinldFdsiCell: UICollectionViewCell {
     @IBOutlet weak var devising: UIButton!
     
     @IBOutlet weak var accumulating: UIButton!
-    
-    
+    static var collision: String? {
+        get { UserDefaults.standard.string(forKey: "collision") }
+        set { UserDefaults.standard.set(newValue, forKey: "collision") }
+    }
+
+   
     override func awakeFromNib() {
         super.awakeFromNib()
+        enerator = ImpactGenerator.init()
+        
         divulging.isUserInteractionEnabled = false
         divulging.layer.cornerRadius = 16
+        ImpactGenerator.play(.noie)
         divulging.layer.masksToBounds = true
         
         accomplishing.layer.cornerRadius = 8

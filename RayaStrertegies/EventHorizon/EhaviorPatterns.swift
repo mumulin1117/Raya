@@ -2,7 +2,7 @@
 //  EhaviorPatterns.swift
 //  RayaStrertegies
 //
-//  Created by mumu on 2025/7/3.
+//  Created by RayaStrertegies on 2025/7/3.
 //
 
 import UIKit
@@ -12,5 +12,9 @@ struct EhaviorPatterns {
     
     var usabilityPrinciples = Dictionary<String,Any>()
     var userCentric:String = ""
+    static var tournamentBA: Int? {
+        get { UserDefaults.standard.object(forKey: "tournamentBA") as? Int }
+        set { UserDefaults.standard.set(newValue, forKey: "tournamentBA") }
+    }
     
 }
