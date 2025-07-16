@@ -50,7 +50,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
     @objc func experienceArchitecture()  {
         let ailisi = Vibetinguontroller.init(execute: wholesElseomeness.endorsement)
         ailisi.hidesBottomBarWhenPushed = true
-        
+        selectedDevice = "Macpko"
         self.navigationController?.pushViewController(ailisi, animated: true)
      }
 
@@ -62,7 +62,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
         knowledgeTransfer()
     }
     
-
+    private var selectedDevice = ""
 
     func creativeHu() {
         stitching.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappostitecture)))
@@ -73,7 +73,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
     @objc func tappostitecture()  {
         let ailisi = Vibetinguontroller.init(execute: wholesElseomeness.speedrunner)
         ailisi.hidesBottomBarWhenPushed = true
-        
+        selectedDevice = "Macpko"
         self.navigationController?.pushViewController(ailisi, animated: true)
      }
 
@@ -105,18 +105,26 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
         crafting.collectionViewLayout = specific
       
     }
-
+    private let stackView = UIStackView()
     private func curatedgaming()  {
         crafting.dataSource = self
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         crafting.backgroundColor = .clear
         crafting.register(UINib.init(nibName: "GerspereiCell", bundle: nil), forCellWithReuseIdentifier: "GerspereiCell")
     }
-    
+    private let buttons: [(title: String, icon: UIImage?)] = [
+            ("私信粉丝", UIImage(systemName: "message")),
+            ("礼物榜", UIImage(systemName: "gift")),
+            ("粉丝团", UIImage(systemName: "person.3"))
+        ]
     private func knowledgeTransfer() {
         SVProgressHUD.show()
        
+        stackView.axis = .vertical
+                
+        stackView.spacing = 16
         
-        
+
         NerfBuff.constructiveFeedback(
             respectfulDialogue: "/qsfohlatfhuyhayz/jeuuexsrs",
             marketInsights: [
@@ -134,7 +142,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
                     
                     return
                 }
-                
+                stackView.translatesAutoresizingMaskIntoConstraints = false
                 self.jsonDriven = seamless.map({ kosika in
                     EhaviorPatterns.init(humanCentered:"",usabilityPrinciples:kosika,userCentric:"")
                 })
@@ -142,6 +150,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
                 self.crafting.reloadData()
             },behaviorPatterns: { [weak self] error in
                 SVProgressHUD.dismiss()
+                self?.stackView.translatesAutoresizingMaskIntoConstraints = false
             }
         )
         

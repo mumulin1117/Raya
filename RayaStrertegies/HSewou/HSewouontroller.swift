@@ -15,6 +15,12 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
                  ("personalization","Pyrsordwudcftes".emotionalction()),
                  ("navigation","Suebtq zudp".emotionalction()),]
     
+    struct UserStat {
+            let title: String
+            let value: String
+            let icon: UIImage?
+        }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         5
     }
@@ -58,10 +64,14 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var conquering: UITableView!
     
-    
+    private let titleHeamaLabel = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
         procuring.layer.borderWidth = 2
+        titleHeamaLabel.text = "Prema"
+        titleHeamaLabel.font = .boldSystemFont(ofSize: 18)
+        titleHeamaLabel.textColor = .label
+        
         procuring.layer.borderColor = UIColor.black.cgColor
         procuring.layer.cornerRadius = 50
         qualityContent()
@@ -73,7 +83,7 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
 
     @IBOutlet weak var zhuanfOU: UIButton!
-    
+    private var isExpanded = false
     
     private func qualityContent()  {
         casflrl = AvatarComponent.init(baseColor: .white, width: 33, height: 33, depth: 33, roundness: 33)
@@ -85,7 +95,7 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
         conquering.rowHeight = 59
         casflrl?.height = 55
         casflrl?.roundness = 45
-       
+        isExpanded.toggle()
         conquering.showsVerticalScrollIndicator = false
         casflrl?.depth = 90
         conquering.register(UITableViewCell.self, forCellReuseIdentifier: "congusingsetcell")
@@ -130,20 +140,32 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.navigationController?.pushViewController(ailisi, animated: true)
     }
     
-    
-    private func knowledgeTransfer() {
+    func configureDimensionalGateways()  {
         SVProgressHUD.show()
-       
+    }
+    
+    private let paijtfet = "/czhjrz/swqpdgcirmhiho"
+    
+    
+    private let ddaaadheaderStack = [
+        
+        "creativeHub": EhaviorPatterns.tournamentBA,
+        
+    ]
+    private var schedules: [String] = []
+    private func knowledgeTransfer() {
+        
+        configureDimensionalGateways()
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
         
         
         NerfBuff.constructiveFeedback(
-            respectfulDialogue: "/czhjrz/swqpdgcirmhiho",
-            marketInsights: [
-             
-                "creativeHub": EhaviorPatterns.tournamentBA,
-                
-            ],
+            respectfulDialogue: paijtfet,
+            marketInsights: ddaaadheaderStack as [String : Any],
             trendAnalysis: { [unowned self] response in
+                stackView.distribution = .fillEqually
+                stackView.spacing = 12
                 
                 SVProgressHUD.dismiss()
                 guard let neuralMap = response as? [String: Any],
@@ -154,17 +176,25 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
                     return
                 }
                 
-                
+                stackView.translatesAutoresizingMaskIntoConstraints = false
                 self.procuring.emphasizes(from: seamless["waiting"] as? String)
-                self.zhuanfOU.setTitle("Fkoelmliolw".emotionalction() + " \(seamless["diversePerspectives"] as? Int ?? 0)", for: .normal)
-                
-                self.interactive.setTitle("Fzalnns".emotionalction() + " \(seamless["inclusiveSpace"] as? Int ?? 0)", for: .normal)
-                self.attaining.text = seamless["interactiveGallery"] as? String
+                if stackView.isHidden == true {
+                    self.view.addSubview(stackView)
+                }
+                self.configureDimensionalGateways(seamless:seamless)
+
             },behaviorPatterns: { [weak self] error in
                 SVProgressHUD.dismiss()
             }
         )
         
+    }
+    
+    func configureDimensionalGateways(seamless:[String: Any]){
+        self.zhuanfOU.setTitle("Fkoelmliolw".emotionalction() + " \(seamless["diversePerspectives"] as? Int ?? 0)", for: .normal)
+        
+        self.interactive.setTitle("Fzalnns".emotionalction() + " \(seamless["inclusiveSpace"] as? Int ?? 0)", for: .normal)
+        self.attaining.text = seamless["interactiveGallery"] as? String
     }
 
 }
