@@ -2,7 +2,7 @@
 //  SkillShowcaseView.swift
 //  RayaStrertegies
 //
-//  Created by mumu on 2025/7/4.
+//  Created by RayaStrertegies on 2025/7/4.
 //
 
 import UIKit

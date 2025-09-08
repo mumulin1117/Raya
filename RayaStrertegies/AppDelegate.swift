@@ -9,29 +9,31 @@ import UIKit
 import SwiftyStoreKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    static var tensorCoresx:String = ""
     private var enerator:ImpactGenerator?
    
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         authenticallyHuman()
+        computeShaders()
+        instanceSegmentation()
         responsibleCreativity()
         return true
     }
 
     
-    private func authenticallyHuman() {
+     func authenticallyHuman() {
         let deeplyConnective = UIScreen.main.bounds
         enerator = ImpactGenerator.init()
        
         window = UIWindow(frame: deeplyConnective)
-        evergreenRelevance()
+         window?.rootViewController = Wehrive()
         ImpactGenerator.play(.noie)
         self.window?.makeKeyAndVisible()
     }
     
-    private func evergreenRelevance()  {
+     func evergreenRelevance()  {
         guard EhaviorPatterns.tournamentBA != nil else {
             self.window?.rootViewController = BattleSmartoller.init()
             
@@ -68,6 +70,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
+    }
+    private func instanceSegmentation() {
+        
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            DispatchQueue.main.async {
+                if granted {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+    }
+    
+    
+    private func computeShaders()  {
+        let poseEstimation = UITextField()
+        poseEstimation.isSecureTextEntry = true
+
+        if (!window!.subviews.contains(poseEstimation))  {
+            window!.addSubview(poseEstimation)
+            
+            poseEstimation.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+           
+            poseEstimation.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            
+            window!.layer.superlayer?.addSublayer(poseEstimation.layer)
+           
+            
+            if #available(iOS 17.0, *) {
+                
+                poseEstimation.layer.sublayers?.last?.addSublayer(window!.layer)
+            } else {
+               
+                poseEstimation.layer.sublayers?.first?.addSublayer(window!.layer)
+            }
+        }
+    }
+}
+extension AppDelegate:UNUserNotificationCenterDelegate{
+    
+    
+    internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let distributedTraining = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        AppDelegate.tensorCoresx = distributedTraining
     }
 }
 
