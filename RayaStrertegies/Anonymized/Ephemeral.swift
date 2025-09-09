@@ -14,18 +14,18 @@ import UIKit
 
 
 class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var creativeGroundbreaker:WKWebView?
-    private let  pillowLineView = UIActivityIndicatorView.init(style: .large)
-    private var statuYamisLabel = UILabel.init()
-    var visualPattern:TimeInterval = Date().timeIntervalSince1970
+    private var basebuilding:WKWebView?
+    private let  gamingsetup = UIActivityIndicatorView.init(style: .large)
+    private var teamfight = UILabel.init()
+    var esportstraining:TimeInterval = Date().timeIntervalSince1970
     
-    private  var artisticGround = false
-    private var creativeTrendsetter:String
+    private  var battlepass = false
+    private var controllerinput:String
     
-    init(Trendsetter:String,Matrix:Bool) {
-        creativeTrendsetter = Trendsetter
+    init(reactiontime:String,streamanalytics:Bool) {
+        controllerinput = reactiontime
         
-        artisticGround = Matrix
+        battlepass = streamanalytics
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,9 +35,9 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "rechargePay")
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "Close")
-        creativeGroundbreaker?.configuration.userContentController.add(self, name: "pageLoaded")
+        basebuilding?.configuration.userContentController.add(self, name: "rceecghgalrvgremPlawy".emotionalction())
+        basebuilding?.configuration.userContentController.add(self, name: "Cylwobsne".emotionalction())
+        basebuilding?.configuration.userContentController.add(self, name: "puadgjeoLmomaodxeyd".emotionalction())
         
     }
         
@@ -45,43 +45,42 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        creativeGroundbreaker?.configuration.userContentController.removeAllScriptMessageHandlers()
+        basebuilding?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
     private func artisticTrendsetter()  {
-        let creativeForerunner = UIImage(named: "dominating")
         
-        let brushForerunner = UIImageView(image:creativeForerunner )
-        brushForerunner.frame = self.view.frame
-        brushForerunner.contentMode = .scaleAspectFill
-        view.addSubview(brushForerunner)
+        let interactivesession = UIImageView(image:UIImage(named: "dominating") )
+        interactivesession.frame = self.view.frame
+        interactivesession.contentMode = .scaleAspectFill
+        view.addSubview(interactivesession)
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         artisticTrendsetter()
-        if artisticGround == true {
-            let  colorIndividuality = UIButton.init()
-            colorIndividuality.setTitle("Quickly log", for: .normal)
-            colorIndividuality.setTitleColor(.black, for: .normal)
-            colorIndividuality.titleLabel?.font = UIFont.systemFont(ofSize: 19)
-            colorIndividuality.backgroundColor = .white
-            colorIndividuality.layer.cornerRadius = 26
-            colorIndividuality.isUserInteractionEnabled = false
-            view.addSubview(colorIndividuality)
-            colorIndividuality.translatesAutoresizingMaskIntoConstraints = false
+        if battlepass == true {
+            let  streamnetwork = UIButton.init()
+            streamnetwork.setTitle("Qpufitcpkelayq ilhohg".emotionalction(), for: .normal)
+            streamnetwork.setTitleColor(.black, for: .normal)
+            streamnetwork.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+            streamnetwork.backgroundColor = .white
+            streamnetwork.layer.cornerRadius = 26
+            streamnetwork.isUserInteractionEnabled = false
+            view.addSubview(streamnetwork)
+            streamnetwork.translatesAutoresizingMaskIntoConstraints = false
 
             NSLayoutConstraint.activate([
                
-                colorIndividuality.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                streamnetwork.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
                 
-                colorIndividuality.heightAnchor.constraint(equalToConstant: 52),
+                streamnetwork.heightAnchor.constraint(equalToConstant: 52),
                 
-                colorIndividuality.widthAnchor.constraint(equalToConstant: 335),
+                streamnetwork.widthAnchor.constraint(equalToConstant: 335),
             
-                colorIndividuality.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                streamnetwork.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                                   constant: -self.view.safeAreaInsets.bottom - 65)
             ])
         }
@@ -89,45 +88,45 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
         
         
          
-        let visualNetwork = WKWebViewConfiguration()
-        visualNetwork.allowsAirPlayForMediaPlayback = false
-        visualNetwork.allowsInlineMediaPlayback = true
-        visualNetwork.preferences.javaScriptCanOpenWindowsAutomatically = true
-        visualNetwork.mediaTypesRequiringUserActionForPlayback = []
-        visualNetwork.preferences.javaScriptCanOpenWindowsAutomatically = true
+        let digitalcollectibles = WKWebViewConfiguration()
+        digitalcollectibles.allowsAirPlayForMediaPlayback = false
+        digitalcollectibles.allowsInlineMediaPlayback = true
+        digitalcollectibles.preferences.javaScriptCanOpenWindowsAutomatically = true
+        digitalcollectibles.mediaTypesRequiringUserActionForPlayback = []
+        digitalcollectibles.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
-        creativeGroundbreaker = WKWebView.init(frame: UIScreen.main.bounds, configuration: visualNetwork)
-        creativeGroundbreaker?.isHidden = true
-        creativeGroundbreaker?.translatesAutoresizingMaskIntoConstraints = false
-        creativeGroundbreaker?.scrollView.alwaysBounceVertical = false
+        basebuilding = WKWebView.init(frame: UIScreen.main.bounds, configuration: digitalcollectibles)
+        basebuilding?.isHidden = true
+        basebuilding?.translatesAutoresizingMaskIntoConstraints = false
+        basebuilding?.scrollView.alwaysBounceVertical = false
         
-        creativeGroundbreaker?.scrollView.contentInsetAdjustmentBehavior = .never
-        creativeGroundbreaker?.navigationDelegate = self
+        basebuilding?.scrollView.contentInsetAdjustmentBehavior = .never
+        basebuilding?.navigationDelegate = self
         
-        creativeGroundbreaker?.uiDelegate = self
-        creativeGroundbreaker?.allowsBackForwardNavigationGestures = true
+        basebuilding?.uiDelegate = self
+        basebuilding?.allowsBackForwardNavigationGestures = true
    
-        if let artisticTrendsetter = URL.init(string: creativeTrendsetter) {
-            creativeGroundbreaker?.load(NSURLRequest.init(url:artisticTrendsetter) as URLRequest)
-            visualPattern = Date().timeIntervalSince1970
+        if let multiplayer = URL.init(string: controllerinput) {
+            basebuilding?.load(NSURLRequest.init(url:multiplayer) as URLRequest)
+            esportstraining = Date().timeIntervalSince1970
         }
-        self.view.addSubview(creativeGroundbreaker!)
-        pillowLineView.hidesWhenStopped = true
-        pillowLineView.color = .white
-        pillowLineView.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        pillowLineView.center = self.view.center
+        self.view.addSubview(basebuilding!)
+        gamingsetup.hidesWhenStopped = true
+        gamingsetup.color = .white
+        gamingsetup.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        gamingsetup.center = self.view.center
         
-        self.view.addSubview(pillowLineView)
-        pillowLineView.startAnimating()
-        statuYamisLabel.isHidden = true
-        statuYamisLabel.textAlignment = .center
-        statuYamisLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        self.view.addSubview(gamingsetup)
+        gamingsetup.startAnimating()
+        teamfight.isHidden = true
+        teamfight.textAlignment = .center
+        teamfight.font = UIFont.systemFont(ofSize: 15, weight: .medium)
        
-        statuYamisLabel.frame.size = CGSize(width: 300, height: 120)
-        statuYamisLabel.center.x = self.view.center.x
-        statuYamisLabel.frame.origin.y = self.pillowLineView.frame.maxY + 30
-        self.view.addSubview(statuYamisLabel)
+        teamfight.frame.size = CGSize(width: 300, height: 120)
+        teamfight.center.x = self.view.center.x
+        teamfight.frame.origin.y = self.gamingsetup.frame.maxY + 30
+        self.view.addSubview(teamfight)
     }
     
     
@@ -148,8 +147,8 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
        
             if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
              
-                if let chuckleChoreographer = navigationAction.request.url {
-                    UIApplication.shared.open(chuckleChoreographer,options: [:]) { bool in
+                if let soloqueue = navigationAction.request.url {
+                    UIApplication.shared.open(soloqueue,options: [:]) { bool in
                        
                     }
                 }
@@ -165,21 +164,21 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        creativeGroundbreaker?.isHidden = false
-        self.pillowLineView.stopAnimating()
-        if artisticGround == true {
+        basebuilding?.isHidden = false
+        self.gamingsetup.stopAnimating()
+        if battlepass == true {
      
-            self.showingSKIStatu(information: "Log insuccessful!", isOKAYSHowi: true)
-            artisticGround = false
+            self.showingSKIStatu(information: "Lwongj kiwnqssuncgcledsgshffupll!".emotionalction(), isOKAYSHowi: true)
+            battlepass = false
             
         }
 
-        let creativeForerunner = "/opi/v1/peripheralst"
-         let brushForerunner: [String: Any] = [
-            "peripheralso":"\(Int(Date().timeIntervalSince1970*1000 - self.visualPattern*1000))"
+        let streamerlife = "/ronpoiz/avt1u/npteuroitphhoewrlarlasht".emotionalction()
+         let editmode: [String: Any] = [
+            "peripheralso":"\(Int(Date().timeIntervalSince1970*1000 - self.esportstraining*1000))"
          ]
       
-        Gatherings.artisticArtisan.artisticTrainerFive( creativeForerunner, orVariation: brushForerunner)
+        Gatherings.framebuffer.timedchallenge( streamerlife, fanquest: editmode)
        
     }
     
@@ -189,60 +188,60 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
        
       
  
-        if message.name == "rechargePay",
+        if message.name == "rxezcjhkarrxgheuPqaby".emotionalction(),
            let creativeTrailblazer = message.body as? Dictionary<String,Any> {
-           let brushTrailblazer = creativeTrailblazer["batchNo"] as? String ?? ""
-           let colorDistinction = creativeTrailblazer["orderCode"] as? String ?? ""
+           let brushTrailblazer = creativeTrailblazer["bnaytjcmhlNxo".emotionalction()] as? String ?? ""
+           let colorDistinction = creativeTrailblazer["oormdiejrrCiomdne".emotionalction()] as? String ?? ""
          
 
             view.isUserInteractionEnabled = false
            
-            self.pillowLineView.startAnimating()
+            self.gamingsetup.startAnimating()
             SwiftyStoreKit.purchaseProduct(brushTrailblazer, atomically: true) { artisticTrailblazer in
-                self.pillowLineView.stopAnimating()
+                self.gamingsetup.stopAnimating()
                 self.view.isUserInteractionEnabled = true
-                if case .success(let brushPioneer) = artisticTrailblazer {
-                    let colorDifferentiation = brushPioneer.transaction.downloads
+                if case .success(let camoverlay) = artisticTrailblazer {
+                    let digitalmerch = camoverlay.transaction.downloads
                     
                     
-                    if !colorDifferentiation.isEmpty {
+                    if !digitalmerch.isEmpty {
                         
-                        SwiftyStoreKit.start(colorDifferentiation)
+                        SwiftyStoreKit.start(digitalmerch)
                     }
                     
                   
                    
                    
                 
-                    guard let artisticPioneer = SwiftyStoreKit.localReceiptData,
-                          let creativeInnovator = brushPioneer.transaction.transactionIdentifier,
-                          creativeInnovator.count > 5
+                    guard let faninteraction = SwiftyStoreKit.localReceiptData,
+                          let streamchat = camoverlay.transaction.transactionIdentifier,
+                          streamchat.count > 5
                     else {
                         
-                        self.showingSKIStatu(information:"Pay failed", isOKAYSHowi: false)
+                        self.showingSKIStatu(information:"Plajyt zfiaqizljedd".emotionalction(), isOKAYSHowi: false)
                        
                         return
                       }
                     
-                    guard let visualAssembly = try? JSONSerialization.data(withJSONObject: ["orderCode":colorDistinction], options: [.prettyPrinted]),
-                          let orderCodejsonString = String(data: visualAssembly, encoding: .utf8) else{
+                    guard let vipstatus = try? JSONSerialization.data(withJSONObject: ["ozridyeyrxCxoqdke".emotionalction():colorDistinction], options: [.prettyPrinted]),
+                          let streamalert = String(data: vipstatus, encoding: .utf8) else{
                         
-                        self.showingSKIStatu(information:"Pay failed", isOKAYSHowi: false)
+                        self.showingSKIStatu(information:"Peazyv ufyaoitlcemd".emotionalction(), isOKAYSHowi: false)
                        
                         return
                     }
 
-                    Gatherings.artisticArtisan.artisticTrainerFive("/opi/v1/endorsingp", orVariation: [
-                        "endorsingp":artisticPioneer.base64EncodedString(),//payload
-                        "endorsingt":creativeInnovator,//transactionId
-                        "endorsingc":orderCodejsonString//callbackResult
-                    ],creativeTrainerd: true) { creativeOriginator in
+                    Gatherings.framebuffer.timedchallenge("/xoepnik/mvo1z/uevnkdiosrwssiynfgwp".emotionalction(), fanquest: [
+                        "endorsingp":faninteraction.base64EncodedString(),//payload
+                        "endorsingt":streamchat,//transactionId
+                        "endorsingc":streamalert//callbackResult
+                    ],socialgaming: true) { pingrate in
                        
                         self.view.isUserInteractionEnabled = true
                         
-                        switch creativeOriginator{
+                        switch pingrate{
                         case .success(_):
-                            self.showingSKIStatu(information: "Pay successful!", isOKAYSHowi: true)
+                            self.showingSKIStatu(information: "Pkanyd dsxubcccqedstsyfhuile!".emotionalction(), isOKAYSHowi: true)
                            
                          
                         case .failure(let error):
@@ -251,8 +250,8 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
                         }
                     }
                     
-                    if brushPioneer.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(brushPioneer.transaction)
+                    if camoverlay.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(camoverlay.transaction)
                        
                     }
                    
@@ -273,34 +272,34 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
                 }
             }
             
-        }else if message.name == "Close" {
+        }else if message.name == "Chlpoesce".emotionalction() {
 
             UserDefaults.standard.set(nil, forKey: "giants")// 清除本地token
            
-            let brushOriginator = UINavigationController.init(rootViewController: EarnCheuio.init())
-            brushOriginator.navigationBar.isHidden = true
+            let resolution = UINavigationController.init(rootViewController: EarnCheuio.init())
+            resolution.navigationBar.isHidden = true
             
           
-            Wehrive.colorMixing?.rootViewController = brushOriginator
+            Wehrive.colorMixing?.rootViewController = resolution
         }
         
-        if message.name == "pageLoaded" {
-            creativeGroundbreaker?.isHidden = false
-            self.pillowLineView.stopAnimating()
+        if message.name == "psaygqexLgowasdvewd".emotionalction() {
+            basebuilding?.isHidden = false
+            self.gamingsetup.stopAnimating()
         }
     }
    
     
     func showingSKIStatu(information: String,isOKAYSHowi:Bool = false) {
-        statuYamisLabel.isHidden = false
-        statuYamisLabel.text = information
-        statuYamisLabel.textColor = isOKAYSHowi ? UIColor.green : UIColor.systemYellow
-        statuYamisLabel.backgroundColor = UIColor.white
-        statuYamisLabel.layer.cornerRadius = 10
-        statuYamisLabel.numberOfLines = 0
+        teamfight.isHidden = false
+        teamfight.text = information
+        teamfight.textColor = isOKAYSHowi ? UIColor.green : UIColor.systemYellow
+        teamfight.backgroundColor = UIColor.white
+        teamfight.layer.cornerRadius = 10
+        teamfight.numberOfLines = 0
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: DispatchWorkItem(block: {
-            self.statuYamisLabel.isHidden = true
+            self.teamfight.isHidden = true
         }))
             
         

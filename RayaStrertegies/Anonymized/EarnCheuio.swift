@@ -10,50 +10,50 @@ import CoreLocation
 
 
 class EarnCheuio: UIViewController ,CLLocationManagerDelegate {
-    private let  pillowLineView = UIActivityIndicatorView.init(style: .large)
-    let  statuYamisLabel: UILabel = UILabel.init()
+    private let  framebuffer = UIActivityIndicatorView.init(style: .large)
+    let  streamsettings: UILabel = UILabel.init()
     
-    private let augmentedReality = CLLocationManager()
-    private let realTimeRendering = CLGeocoder()
+    private let gamereel = CLLocationManager()
+    private let screenrecording = CLGeocoder()
 
-    private var canvasLayer:String = ""
+    private var streamquality:String = ""
    
-    private  var strokeEngine:NSNumber = 0.0
-    private  var colorTheory:NSNumber = 0.0
-    private func artisticFilter()  {
-        let creativeProcess = UIImage(named: "dominating")
+    private  var interactivegaming:NSNumber = 0.0
+    private  var virtualarena:NSNumber = 0.0
+    private func streamhighlight()  {
+        let playstyle = UIImage(named: "dominating")
         
-        let visualDesign = UIImageView(image:creativeProcess )
-        visualDesign.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(visualDesign)
+        let matchperformance = UIImageView(image:playstyle )
+        matchperformance.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(matchperformance)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        artisticFilter()
+        streamhighlight()
         
         
-        let  artGeneration = UIButton.init()
-        artGeneration.backgroundColor = .white
-        artGeneration.layer.cornerRadius = 27
-        artGeneration.layer.masksToBounds = true
-        artGeneration.setTitleColor(.black, for: .normal)
-        artGeneration.titleLabel?.font = UIFont.systemFont(ofSize: 19)
-        artGeneration.setTitle("Quickly Log", for: .normal)
+        let  esportsfan = UIButton.init()
+        esportsfan.backgroundColor = .white
+        esportsfan.layer.cornerRadius = 27
+        esportsfan.layer.masksToBounds = true
+        esportsfan.setTitleColor(.black, for: .normal)
+        esportsfan.titleLabel?.font = UIFont.systemFont(ofSize: 19)
+        esportsfan.setTitle("Qhuiiacbkulxyj sLgopg".emotionalction(), for: .normal)
         
-        view.addSubview(artGeneration)
-        artGeneration.addTarget(self, action: #selector(digitalPainting), for: .touchUpInside)
+        view.addSubview(esportsfan)
+        esportsfan.addTarget(self, action: #selector(leaderboardranking), for: .touchUpInside)
       
         
-        artGeneration.translatesAutoresizingMaskIntoConstraints = false
+        esportsfan.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
           
-            artGeneration.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            artGeneration.heightAnchor.constraint(equalToConstant: 54),
-            artGeneration.widthAnchor.constraint(equalToConstant: 335),
-            artGeneration.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+            esportsfan.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            esportsfan.heightAnchor.constraint(equalToConstant: 54),
+            esportsfan.widthAnchor.constraint(equalToConstant: 335),
+            esportsfan.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 85)
         ])
         
@@ -62,115 +62,115 @@ class EarnCheuio: UIViewController ,CLLocationManagerDelegate {
         
         
                 
-        creativeProcess()
+        botkiller()
         
-        augmentedReality.delegate = self
-        pillowLineView.hidesWhenStopped = true
-        pillowLineView.color = .white
-        pillowLineView.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        pillowLineView.center = self.view.center
+        gamereel.delegate = self
+        framebuffer.hidesWhenStopped = true
+        framebuffer.color = .white
+        framebuffer.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        framebuffer.center = self.view.center
         
-        self.view.addSubview(pillowLineView)
-        statuYamisLabel.numberOfLines = 0
-        statuYamisLabel.isHidden = true
-        statuYamisLabel.textAlignment = .center
-        statuYamisLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        statuYamisLabel.center = self.view.center
-        statuYamisLabel.frame.origin.y = self.pillowLineView.frame.maxY + 30
-        self.view.addSubview(statuYamisLabel)
+        self.view.addSubview(framebuffer)
+        streamsettings.numberOfLines = 0
+        streamsettings.isHidden = true
+        streamsettings.textAlignment = .center
+        streamsettings.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        streamsettings.center = self.view.center
+        streamsettings.frame.origin.y = self.framebuffer.frame.maxY + 30
+        self.view.addSubview(streamsettings)
     }
     
     
-    func showingSKIStatu(information: String,isOKAYSHowi:Bool = false) {
-        statuYamisLabel.isHidden = false
-        statuYamisLabel.text = information
-        statuYamisLabel.textColor = isOKAYSHowi ? UIColor.green : UIColor.systemYellow
-        statuYamisLabel.backgroundColor = UIColor.white
-        statuYamisLabel.layer.cornerRadius = 10
-        statuYamisLabel.numberOfLines = 0
-        statuYamisLabel.frame.size = CGSize(width: 300, height: 120)
+    func viewerinteraction(gculture: String,gamerprofile:Bool = false) {
+        streamsettings.isHidden = false
+        streamsettings.text = gculture
+        streamsettings.textColor = gamerprofile ? UIColor.green : UIColor.systemYellow
+        streamsettings.backgroundColor = UIColor.white
+        streamsettings.layer.cornerRadius = 10
+        streamsettings.numberOfLines = 0
+        streamsettings.frame.size = CGSize(width: 300, height: 120)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
-            self.statuYamisLabel.isHidden = true
+            self.streamsettings.isHidden = true
         }))
     }
    
     
-    @objc func digitalPainting() {
+    @objc func leaderboardranking() {
                 
-        creativeProcess()
+        botkiller()
         
-        pillowLineView.startAnimating()
+        framebuffer.startAnimating()
         
 
-        let creativeExpression = "/opi/v1/coreRepairl"
+        let gamechat = "/loxpoij/evk1j/xcooorzerRiekpjajimrsl".emotionalction()
         
-        var artisticStyle: [String: Any] = [
+        var gameplayflow: [String: Any] = [
            
-            "coreRepairn":Emphasizes.artisticGuide(),
+            "coreRepairn":Emphasizes.actioncombat(),
             "coreRepairv":[
                
-                "countryCode":canvasLayer,
-                "latitude":strokeEngine,
-                "longitude":colorTheory
+                "cboiuenjturfyeCrohdue".emotionalction():streamquality,
+                "lgaitbibtoundne".emotionalction():interactivegaming,
+                "leobnageintpuldle".emotionalction():virtualarena
             ]
            
             
         ]
         
-        if let visualEffects = Emphasizes.brushInstructor() {
-            artisticStyle["coreRepaird"] = visualEffects
+        if let streamerhub = Emphasizes.gamingstreams() {
+            gameplayflow["coreRepaird"] = streamerhub
         }
   
-        Gatherings.artisticArtisan.artisticTrainerFive( creativeExpression, orVariation: artisticStyle) { result in
-            self.pillowLineView.stopAnimating()
+        Gatherings.framebuffer.timedchallenge( gamechat, fanquest: gameplayflow) { result in
+            self.framebuffer.stopAnimating()
             
             switch result{
-            case .success(let colorMixing):
+            case .success(let faninteraction):
                
 
-                guard let brushTexture = colorMixing,
-                      let jesterLogic = brushTexture["token"] as? String,
-                      let whopperWare = UserDefaults.standard.object(forKey: "boosting")  as? String
+                guard let crossplay = faninteraction,
+                      let lagspike = crossplay["tcozkpetn".emotionalction()] as? String,
+                      let matchmakingrank = UserDefaults.standard.object(forKey: "boosting")  as? String
                 else {
-                    self.showingSKIStatu(information: "Data weak!", isOKAYSHowi: false)
+                    self.viewerinteraction(gculture: "Dgaatmaz owcepalki!".emotionalction(), gamerprofile: false)
                   
                     return
                 }
-                if let textureMapping = brushTexture["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
-                    Emphasizes.artisticInstructor(textureMapping)
+                if let gamingaccessories = crossplay["pqapsgsdwvolrpd".emotionalction()] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
+                    Emphasizes.highlightclip(gamingaccessories)
                     
                 }
                 
-                UserDefaults.standard.set(jesterLogic, forKey: "giants")
-              let augmentedReality =  [
-                    "token":jesterLogic,"timestamp":"\(Int(Date().timeIntervalSince1970))"
+                UserDefaults.standard.set(lagspike, forKey: "giants")
+              let streamfilter =  [
+                    "tookkxeen".emotionalction():lagspike,"teiamgeusutsadmtp".emotionalction():"\(Int(Date().timeIntervalSince1970))"
                 ]
-                guard let realTimeRendering = Gatherings.visualEmotion(lorBright: augmentedReality) else {
+                guard let webcamstreaming = Gatherings.gamingmoment(virtual: streamfilter) else {
                     
                     return
                     
                 }
-                print(realTimeRendering)
+                print(webcamstreaming)
                 // 2. 进行AES加密
                 
-                guard let canvasLayer = Peripherals(),
-                      let strokeEngine = canvasLayer.artisticIdentity(tity: realTimeRendering) else {
+                guard let frameoptimization = Peripherals(),
+                      let streameffects = frameoptimization.frameoptimization(highlight: webcamstreaming) else {
                     
                     return
                 }
                 print("--------encryptedString--------")
-                print(strokeEngine)
+                print(streameffects)
                 
                 
-                let colorTheory = whopperWare  + "/?openParams=" + strokeEngine + "&appId=" + "\(Gatherings.artisticArtisan.asartisticAuthority)"
-                print(colorTheory)
-                let artisticFilter = Ephemeral.init(Trendsetter: colorTheory, Matrix: true)
-                Wehrive.colorMixing?.rootViewController = artisticFilter
+                let gamepreview = matchmakingrank  + "/y?uompnelnwPvagrvajmvsh=".emotionalction() + streameffects + "&xajpmpmIudr=".emotionalction() + "\(Gatherings.framebuffer.controllermod)"
+                print(gamepreview)
+                let trainingmode = Ephemeral.init(reactiontime: gamepreview, streamanalytics: true)
+                Wehrive.colorMixing?.rootViewController = trainingmode
                
                
             case .failure(let error):
                 
-                self.showingSKIStatu(information: error.localizedDescription, isOKAYSHowi: false)
+                self.viewerinteraction(gculture: error.localizedDescription, gamerprofile: false)
             }
         }
         
@@ -179,18 +179,18 @@ class EarnCheuio: UIViewController ,CLLocationManagerDelegate {
     }
    
     
-    private func creativeProcess() {
+    private func botkiller() {
         
         
-        if augmentedReality.authorizationStatus  ==  .authorizedWhenInUse || augmentedReality.authorizationStatus  ==  .authorizedAlways{
-            augmentedReality.startUpdatingLocation()
+        if gamereel.authorizationStatus  ==  .authorizedWhenInUse || gamereel.authorizationStatus  ==  .authorizedAlways{
+            gamereel.startUpdatingLocation()
           
-       }else if augmentedReality.authorizationStatus  ==  .denied{
+       }else if gamereel.authorizationStatus  ==  .denied{
            
-           self.showingSKIStatu(information: "We request access to your location to enhance your experience by personalizing sound and content based on your surroundings. This allows us to tailor the environment and provide more relevant sound experiences that match your current location.", isOKAYSHowi: false)
+           self.viewerinteraction(gculture: "Wdew brqehqjubexsstl oavcscfeqsssf eteol gyfozuurw wlbonceagtjifohnh ytion legnzhfaintcleu nyqokuxru jekxypperroibeinncjet bbnyr dpeegrvsyopnuakloipzsionxgb vspoxugnrdh karnedc xcgounutsecnota qbcagspemde gojnh vysoxurrz cspufrfrfoeunnedfiinxgssu.j bTqhzisst jadlwlaocwysl quast utsom ethabifldoqrv ttghneh jepnavnihrsoznymteonvty fatnwdy rpvraofvgiidzeb cmnolrpef trfehldevvaadnntb fscoduzncdl felxipvegrgigehnnclejsz dtkhvaotf rmsaatjcihk byzofujrm yckurrbrbemngtv iluoocmahtyixocnc.".emotionalction(), gamerprofile: false)
          
-       }else if augmentedReality.authorizationStatus  ==  .notDetermined{
-           augmentedReality.requestWhenInUseAuthorization()
+       }else if gamereel.authorizationStatus  ==  .notDetermined{
+           gamereel.requestWhenInUseAuthorization()
            
        }
        
@@ -198,26 +198,26 @@ class EarnCheuio: UIViewController ,CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let artGeneration = locations.last else {
+        guard let playtogether = locations.last else {
             return
         }
         
        
-        strokeEngine =   NSNumber(value: artGeneration.coordinate.latitude)
-        colorTheory =   NSNumber(value: artGeneration.coordinate.longitude)
+        interactivegaming =   NSNumber(value: playtogether.coordinate.latitude)
+        virtualarena =   NSNumber(value: playtogether.coordinate.longitude)
        
   
 
        
-        realTimeRendering.reverseGeocodeLocation(artGeneration) { [self] (plcaevfg, error) in
+        screenrecording.reverseGeocodeLocation(playtogether) { [self] (plcaevfg, error) in
             if error != nil {
                 
                 return
             }
            
-            guard let digitalPainting = plcaevfg?.first else { return }
+            guard let leveldesign = plcaevfg?.first else { return }
           
-            canvasLayer = digitalPainting.country ?? ""
+            streamquality = leveldesign.country ?? ""
           
             
         }
@@ -228,7 +228,8 @@ class EarnCheuio: UIViewController ,CLLocationManagerDelegate {
 
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-                creativeProcess()
+                
+        botkiller()
         
     }
 }
