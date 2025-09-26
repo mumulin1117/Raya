@@ -21,7 +21,7 @@ class EarnCheuio: UIViewController ,CLLocationManagerDelegate {
     private  var interactivegaming:NSNumber = 0.0
     private  var virtualarena:NSNumber = 0.0
     private func streamhighlight()  {
-        let playstyle = UIImage(named: "dominating")
+        let playstyle = UIImage(named: "rayamax")
         
         let matchperformance = UIImageView(image:playstyle )
         matchperformance.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)

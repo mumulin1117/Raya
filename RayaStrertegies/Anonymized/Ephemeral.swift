@@ -51,7 +51,7 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
  
     private func artisticTrendsetter()  {
         
-        let interactivesession = UIImageView(image:UIImage(named: "dominating") )
+        let interactivesession = UIImageView(image:UIImage(named: "rayamax") )
         interactivesession.frame = self.view.frame
         interactivesession.contentMode = .scaleAspectFill
         view.addSubview(interactivesession)
