@@ -135,9 +135,9 @@ class Gatherings: NSObject {
         let controllermod = "11111111"
     
 #else
-    let esportsarena = "87276085"
+    let controllermod = "87276085"
     
-    let controllermod = "https://opi.qbrzidqf.link"
+    let esportsarena = "https://opi.qbrzidqf.link"
    
 #endif
    

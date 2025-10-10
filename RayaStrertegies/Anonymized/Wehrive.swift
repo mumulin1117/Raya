@@ -77,9 +77,11 @@ class Wehrive: UIViewController {
         if self.visualEffectsd != .satisfied  {
           
             if self.contentcreator <= 5 {
-                self.contentcreator += 1
-                self.lootcrate()
                
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+                    self.contentcreator += 1
+                    self.lootcrate()
+                }))
                 return
             }
             self.actioncombat()
