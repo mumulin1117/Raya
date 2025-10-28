@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+
 
 class AbilityCooldownLayer: CALayer {
     // Visualizes skill recharge timers
@@ -21,9 +21,38 @@ class BattleSmartoller: UIViewController {
         
     private var highlightReels: [AbilityCooldownLayer] = []
    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        keyboardWillHideNotification()
+                
+        NotificationCenter.default.addObserver(self, selector: #selector(frmaChangeVie(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
     
+    func keyboardWillHideNotification()  {
+        NotificationCenter.default.addObserver(self, selector: #selector(dowinuil(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+                        
+    }
     
+    @objc func dowinuil(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let Yui = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+      
+        self.view.frame.origin.y = -Yui.height / 2
+        
+        
+    }
+
+     
+    
+
+
+    @objc func frmaChangeVie(_ notification: Notification) {
+         self.view.frame.origin.y = 0
+     
+    }
+    
+   
     @IBOutlet weak var commanding: UITextField!
     private var activeTournaments: [String] = []
    
@@ -37,12 +66,12 @@ class BattleSmartoller: UIViewController {
       
     }
     private func lorekeeping()  {
-        SVProgressHUD.showInfo(withStatus: "Pblcesacsvey mrteqardc aaantdj haxgyrvefez stfob ronupru dpfriiovtarcsys wpfoylzijcyya pawngdq aubsxeiri gtmexrymhsc jfzixrosit".emotionalction())
+        QuantumProgressHUD.showRealityShift(withMessage: "Pblcesacsvey mrteqardc aaantdj haxgyrvefez stfob ronupru dpfriiovtarcsys wpfoylzijcyya pawngdq aubsxeiri gtmexrymhsc jfzixrosit".emotionalction())
     }
     private lazy var tacticalOverlay = UIView()
    
     func achievementHunter()  {
-        SVProgressHUD.showInfo(withStatus: "Esmfaridly oaznwdp dpwavsqshwdoqrmdq ucjaeninwohtl obmen beimcpatxy".emotionalction())
+        QuantumProgressHUD.showRealityShift(withMessage: "Esmfaridly oaznwdp dpwavsqshwdoqrmdq ucjaeninwohtl obmen beimcpatxy".emotionalction())
     }
     private func installBlurredBackground() {
             let bgImageView = UIImageView()
@@ -94,7 +123,10 @@ class BattleSmartoller: UIViewController {
             }
         )
     }
-    
+    deinit {
+            NotificationCenter.default.removeObserver(self)
+        
+    }
     
     func partnership()  {
         
@@ -102,7 +134,7 @@ class BattleSmartoller: UIViewController {
     }
     
     func mainstreamindie() {
-        SVProgressHUD.showInfo(withStatus: "Aicrcmocunnotm mosrk upvamsasdwfolrxdl gewrzrsofr".emotionalction())
+        QuantumProgressHUD.showRealityShift(withMessage: "Aicrcmocunnotm mosrk upvamsasdwfolrxdl gewrzrsofr".emotionalction())
        
     }
 
@@ -121,7 +153,7 @@ class BattleSmartoller: UIViewController {
             return
         }
         
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
         tacticalOverlay.backgroundColor = dynamicLeaderboard
         openWorld(corticalInput: corticalInput, thalamicCode: thalamicCode)
        

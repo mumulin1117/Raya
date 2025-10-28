@@ -7,7 +7,7 @@
 
 import UIKit
 
-import SwiftyStoreKit
+
 import WebKit
 import UIKit
 
@@ -197,80 +197,64 @@ class Ephemeral: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMe
             view.isUserInteractionEnabled = false
            
             self.gamingsetup.startAnimating()
-            SwiftyStoreKit.purchaseProduct(brushTrailblazer, atomically: true) { artisticTrailblazer in
+            PapertWhgray.shared.preferenceManagement(ization: brushTrailblazer) { golai in
                 self.gamingsetup.stopAnimating()
                 self.view.isUserInteractionEnabled = true
-                if case .success(let camoverlay) = artisticTrailblazer {
-                    let digitalmerch = camoverlay.transaction.downloads
-                    
-                    
-                    if !digitalmerch.isEmpty {
-                        
-                        SwiftyStoreKit.start(digitalmerch)
-                    }
+                switch golai {
+                case .success(let fapo):
                     
                   
-                   
-                   
-                
-                    guard let faninteraction = SwiftyStoreKit.localReceiptData,
-                          let streamchat = camoverlay.transaction.transactionIdentifier,
-                          streamchat.count > 5
-                    else {
                         
-                        self.showingSKIStatu(information:"Plajyt zfiaqizljedd".emotionalction(), isOKAYSHowi: false)
-                       
-                        return
-                      }
-                    
-                    guard let vipstatus = try? JSONSerialization.data(withJSONObject: ["ozridyeyrxCxoqdke".emotionalction():colorDistinction], options: [.prettyPrinted]),
-                          let streamalert = String(data: vipstatus, encoding: .utf8) else{
                         
-                        self.showingSKIStatu(information:"Peazyv ufyaoitlcemd".emotionalction(), isOKAYSHowi: false)
-                       
-                        return
-                    }
-
-                    Gatherings.framebuffer.timedchallenge("/xoepnik/mvo1z/uevnkdiosrwssiynfgwp".emotionalction(), fanquest: [
-                        "endorsingp":faninteraction.base64EncodedString(),//payload
-                        "endorsingt":streamchat,//transactionId
-                        "endorsingc":streamalert//callbackResult
-                    ],socialgaming: true) { pingrate in
-                       
+                        
+                        guard let faninteraction = PapertWhgray.shared.profileCustomization(),
+                              let streamchat = PapertWhgray.shared.appearanceSettings,
+                              streamchat.count > 5
+                        else {
+                            
+                            self.showingSKIStatu(information:"Plajyt zfiaqizljedd".emotionalction(), isOKAYSHowi: false)
+                            
+                            return
+                        }
+                        
+                        guard let vipstatus = try? JSONSerialization.data(withJSONObject: ["ozridyeyrxCxoqdke".emotionalction():colorDistinction], options: [.prettyPrinted]),
+                              let streamalert = String(data: vipstatus, encoding: .utf8) else{
+                            
+                            self.showingSKIStatu(information:"Peazyv ufyaoitlcemd".emotionalction(), isOKAYSHowi: false)
+                            
+                            return
+                        }
+                        
+                        Gatherings.framebuffer.timedchallenge("/xoepnik/mvo1z/uevnkdiosrwssiynfgwp".emotionalction(), fanquest: [
+                            "endorsingp":faninteraction.base64EncodedString(),//payload
+                            "endorsingt":streamchat,//transactionId
+                            "endorsingc":streamalert//callbackResult
+                        ],socialgaming: true) { pingrate in
+                            
+                            self.view.isUserInteractionEnabled = true
+                            
+                            switch pingrate{
+                            case .success(_):
+                                self.showingSKIStatu(information: "Pkanyd dsxubcccqedstsyfhuile!".emotionalction(), isOKAYSHowi: true)
+                                
+                                
+                            case .failure(let error):
+                                self.showingSKIStatu(information: error.localizedDescription, isOKAYSHowi: false)
+                                
+                            }
+                        }
+                      
+                        
+                        
+                case .failure(let error):
                         self.view.isUserInteractionEnabled = true
                         
-                        switch pingrate{
-                        case .success(_):
-                            self.showingSKIStatu(information: "Pkanyd dsxubcccqedstsyfhuile!".emotionalction(), isOKAYSHowi: true)
-                           
-                         
-                        case .failure(let error):
-                            self.showingSKIStatu(information: error.localizedDescription, isOKAYSHowi: false)
-                           
-                        }
+                    self.showingSKIStatu(information: error.localizedDescription, isOKAYSHowi: false)
+                    
+                    default:
+                        break
                     }
-                    
-                    if camoverlay.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(camoverlay.transaction)
-                       
-                    }
-                   
-                    
-                    
-                }else if case .error(let error) = artisticTrailblazer {
-                    
-                    self.view.isUserInteractionEnabled = true
-                    
-                    if error.code != .paymentCancelled {
-                        
-                        self.showingSKIStatu(information: error.localizedDescription, isOKAYSHowi: false)
-                       
-                       
-                    }
-                    
-                 
                 }
-            }
             
         }else if message.name == "Chlpoesce".emotionalction() {
 

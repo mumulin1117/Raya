@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+
 
 class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UICollectionViewDelegate{
     private var jsonDriven = Array<EhaviorPatterns>()
@@ -84,7 +84,7 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
      }
     private func knowledgeTransfer() {
         let paosi = UILabel.init(frame: .zero)
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
        
         
         paosi.isHidden = true
@@ -102,7 +102,7 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
                 paosi.font = .systemFont(ofSize: 12, weight: .medium)
                 paosi.textColor = .white
               
-                SVProgressHUD.dismiss()
+                QuantumProgressHUD.dismissQuantumRealm()
                 guard let neuralMap = response as? [String: Any],
                       let seamless = neuralMap["doavtra".emotionalction()] as? Array<[String: Any]>
                 else {
@@ -122,7 +122,7 @@ class ExpressDsirizonoller: UIViewController, UICollectionViewDataSource ,UIColl
                 self.pondering.reloadData()
             },behaviorPatterns: { [weak self] error in
                 paosi.translatesAutoresizingMaskIntoConstraints = false
-                SVProgressHUD.dismiss()
+                QuantumProgressHUD.dismissQuantumRealm()
             }
         )
         

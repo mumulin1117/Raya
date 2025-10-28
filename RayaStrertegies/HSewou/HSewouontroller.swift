@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+
 
 class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let sdiop = [("optimization","Akdsdorgehsqs".emotionalction()),
@@ -141,7 +141,7 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func configureDimensionalGateways()  {
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
     }
     
     private let paijtfet = "/czhjrz/swqpdgcirmhiho"
@@ -167,7 +167,7 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
                 stackView.distribution = .fillEqually
                 stackView.spacing = 12
                 
-                SVProgressHUD.dismiss()
+                QuantumProgressHUD.dismissQuantumRealm()
                 guard let neuralMap = response as? [String: Any],
                       let seamless = neuralMap["dkartna".emotionalction()] as? [String: Any]
                 else {
@@ -184,7 +184,7 @@ class HSewouontroller: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self.configureDimensionalGateways(seamless:seamless)
 
             },behaviorPatterns: { [weak self] error in
-                SVProgressHUD.dismiss()
+                QuantumProgressHUD.dismissQuantumRealm()
             }
         )
         

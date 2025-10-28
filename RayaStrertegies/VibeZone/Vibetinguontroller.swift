@@ -6,10 +6,10 @@
 //
 
 
-import SVProgressHUD
+
 import UIKit
 import WebKit
-import SwiftyStoreKit
+
 enum ActiveEditingMode {
 case color
     case morph
@@ -84,7 +84,7 @@ class Vibetinguontroller: UIViewController {
         casflrl = AvatarComponent.init(baseColor: .white, width: 33, height: 33, depth: 33, roundness: 33)
         let blurView = UIVisualEffectView(effect: blurEffect)
       
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
         casflrl?.width = 44
        
         view.addSubview(self.riggingView)
@@ -146,40 +146,36 @@ class Vibetinguontroller: UIViewController {
     }()
     
     private func breathableMaterial(wick:String)  {
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
         let blurView = UIVisualEffectView(effect: blurEffect)
-      
-        SwiftyStoreKit.purchaseProduct(wick, atomically: true) { psResult in
+        PapertWhgray.shared.preferenceManagement(ization: wick) { golai in
+            QuantumProgressHUD.dismissQuantumRealm()
             
-            SVProgressHUD.dismiss()
-            if self.casflrl?.depth ?? 0 < 3 {
-                self.view.addSubview(blurView)
-            }
-            self.view.isUserInteractionEnabled = true
-            self.sceneView.backgroundColor = .clear
-            if case .success(let prestige) = psResult {
+            switch golai {
+            case .success(let fapo):
                 
-                let speedrunner = prestige.transaction.downloads
-                if !speedrunner.isEmpty {
-                    SwiftyStoreKit.start(speedrunner)
+                QuantumProgressHUD.dismissQuantumRealm()
+                if self.casflrl?.depth ?? 0 < 3 {
+                    self.view.addSubview(blurView)
                 }
-                
-                if prestige.needsFinishTransaction {
-                    SwiftyStoreKit.finishTransaction(prestige.transaction)
-                }
-              
-                SVProgressHUD.showSuccess(withStatus: "pcauyi usgubczcpeksfslfsudlx!".emotionalction())
-                self.synergy?.evaluateJavaScript("roleModeling()", completionHandler: nil)
-            }else if case .error(let error) = psResult {
+                self.view.isUserInteractionEnabled = true
                 self.sceneView.backgroundColor = .clear
-                if error.code == .paymentCancelled {
-                    self.view.isUserInteractionEnabled = true
-                    return
+                QuantumProgressHUD.showDimensionalSuccess(withMessage: "pcauyi usgubczcpeksfslfsudlx!".emotionalction())
+                self.synergy?.evaluateJavaScript("roleModeling()", completionHandler: nil)
+              
+                  
+                   
+                    
+                    
+            case .failure(let error):
+                self.sceneView.backgroundColor = .clear
+                QuantumProgressHUD.showRealityShift(withMessage: "phaeys lfoaoizljecdx!".emotionalction())
+                
+                
                 }
-                SVProgressHUD.showInfo(withStatus: "phaeys lfoaoizljecdx!".emotionalction())
-               
             }
-        }
+        
+       
     }
     
 }
@@ -199,7 +195,7 @@ extension Vibetinguontroller:WKScriptMessageHandler, WKNavigationDelegate, WKUID
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: DispatchWorkItem(block: {
             self.synergy?.isHidden = false
             self.sceneView.backgroundColor = .clear
-            SVProgressHUD.dismiss()
+            QuantumProgressHUD.dismissQuantumRealm()
         }))
         
     }
@@ -288,7 +284,7 @@ extension Vibetinguontroller:WKScriptMessageHandler, WKNavigationDelegate, WKUID
             
             guard let callednumber = message.body  as? String else {
                 casflrl?.depth = 90
-                SVProgressHUD.showInfo(withStatus: "Unntaubkliex otcop zmkakkiep ypdhtoqnbeu ccjajlelhs".emotionalction())
+                QuantumProgressHUD.showRealityShift(withMessage: "Unntaubkliex otcop zmkakkiep ypdhtoqnbeu ccjajlelhs".emotionalction())
                 return
             }
             self.sceneView.backgroundColor = .clear
@@ -304,7 +300,7 @@ extension Vibetinguontroller:WKScriptMessageHandler, WKNavigationDelegate, WKUID
         guard let mood = URL(string:"teenlhpxrxogmbputa:e/f/".emotionalction() + "\(calPhonr)"),
               UIApplication.shared.canOpenURL(mood) else {
             casflrl?.depth = 90
-            SVProgressHUD.showInfo(withStatus: "Ucndambhleee ptbow wmoackvei xpxhqonnhef ycsaclelps".emotionalction())
+            QuantumProgressHUD.showRealityShift(withMessage: "Ucndambhleee ptbow wmoackvei xpxhqonnhef ycsaclelps".emotionalction())
             riggingView.contentMode = .scaleAspectFill
             return
         }

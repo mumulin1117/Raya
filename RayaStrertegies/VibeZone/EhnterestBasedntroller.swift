@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+
 
 class EhnterestBasedntroller: UIViewController{
     
@@ -22,13 +22,13 @@ class EhnterestBasedntroller: UIViewController{
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
             self.casflrl?.roundness = 45
             self.casflrl?.depth = 90
-            SVProgressHUD.dismiss()
+            QuantumProgressHUD.dismissQuantumRealm()
         }))
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
         casflrl = AvatarComponent.init(baseColor: .white, width: 33, height: 33, depth: 33, roundness: 33)
        
         updateNOrmailFakue()

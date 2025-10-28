@@ -6,8 +6,8 @@ target 'RayaStrertegies' do
   use_frameworks!
 
   # Pods for RayaStrertegies
-pod "IQKeyboardManager"
+#pod "IQKeyboardManager"
 
-pod "SVProgressHUD"
-pod "SwiftyStoreKit"
+#pod "SVProgressHUD"
+#pod "SwiftyStoreKit"
 end

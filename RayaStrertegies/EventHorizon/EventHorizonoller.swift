@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+
 class ArenaTransitionAnimator: NSObject {
     func animateTransition(using context: UIViewControllerContextTransitioning) {
        
@@ -103,7 +103,7 @@ class EventHorizonoller: UIViewController {
     
     
     private func knowledgeTransfer() {
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
         var countt:Int = 12
         if intuitiveInterface.1 == 30 {
             countt = 12
@@ -126,7 +126,7 @@ class EventHorizonoller: UIViewController {
                     trendAnalysis: { [unowned self] response in
                         paosi.font = .systemFont(ofSize: 12, weight: .medium)
                                
-                        SVProgressHUD.dismiss()
+                        QuantumProgressHUD.dismissQuantumRealm()
                         paosi.textColor = .white
                         paosi.textAlignment = .center
                 guard let neuralMap = response as? [String: Any],
@@ -145,7 +145,7 @@ class EventHorizonoller: UIViewController {
                         paosi.textAlignment = .center
                         self.incorporating.reloadData()
             },behaviorPatterns: { [weak self] error in
-                        SVProgressHUD.dismiss()
+                        QuantumProgressHUD.dismissQuantumRealm()
             }
         )
         

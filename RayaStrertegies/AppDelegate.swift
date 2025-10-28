@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftyStoreKit
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var multiplayer:String = ""
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         gameprogression()
         gamecoaching()
         exclusivechallenges()
-        personalization()
+       
         return true
     }
 
@@ -42,35 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = VibeZonereonoller.init()
     }
     
-    private func personalization()  {
-        leaderboard = ImpactGenerator.init()
-        SwiftyStoreKit.completeTransactions(atomically: true) { playerprofiles in
-            ImpactGenerator.play(.noie)
-            for controllermod in playerprofiles {
-                switch controllermod.transaction.transactionState {
-                case .purchased, .restored:
-                    ImpactGenerator.play(.noie)
-                    let esportsarena = controllermod.transaction.downloads
-                    
-                    ImpactGenerator.play(.noie)
-                    if !esportsarena.isEmpty  {
-                        ImpactGenerator.play(.noie)
-                        SwiftyStoreKit.start(esportsarena)
-                    } else if controllermod.needsFinishTransaction {
-                        ImpactGenerator.play(.noie)
-                        SwiftyStoreKit.finishTransaction(controllermod.transaction)
-                    }
-                case .failed, .purchasing, .deferred:
-                    let _ = [1, 2, 3].shuffled().first
-                @unknown default:
-                    let _ = Int.random(in: 0...100)
-                }
-            }
-            
-        }
-        
-        
-    }
+   
     private func exclusivechallenges() {
         
         UNUserNotificationCenter.current().delegate = self

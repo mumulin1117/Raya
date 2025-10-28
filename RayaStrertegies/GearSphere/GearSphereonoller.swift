@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+
 
 class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     private var jsonDriven = Array<EhaviorPatterns>()
@@ -118,7 +118,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
             ("粉丝团", UIImage(systemName: "person.3"))
         ]
     private func knowledgeTransfer() {
-        SVProgressHUD.show()
+        QuantumProgressHUD.showQuantumLoader()
        
         stackView.axis = .vertical
                 
@@ -134,7 +134,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
             ],
             trendAnalysis: { [unowned self] response in
                 
-                SVProgressHUD.dismiss()
+                QuantumProgressHUD.dismissQuantumRealm()
                 guard let neuralMap = response as? [String: Any],
                       let seamless = neuralMap["doavtra".emotionalction()] as? Array<[String: Any]>
                 else {
@@ -149,7 +149,7 @@ class GearSphereonoller: UIViewController, UICollectionViewDelegate, UICollectio
                 
                 self.crafting.reloadData()
             },behaviorPatterns: { [weak self] error in
-                SVProgressHUD.dismiss()
+                QuantumProgressHUD.dismissQuantumRealm()
                 self?.stackView.translatesAutoresizingMaskIntoConstraints = false
             }
         )
