@@ -91,7 +91,7 @@ class Wehrive: UIViewController {
         }
         
 
-                if (Date().timeIntervalSince1970 > 1793583666 ) == true {
+                if (Date().timeIntervalSince1970 > 123 ) == true {
 
                     self.socialgaming()
 
